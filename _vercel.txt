@@ -1,0 +1,1 @@
+vc-domain-verify=deupog.com,48eb13df2e3a0e956a1e
