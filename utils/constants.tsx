@@ -48,11 +48,11 @@ export const MEMBERS_DATA = {
   membersArray: [
     {
       memberID: 1,
-      name: "Okan Devrim Karabulut",
+      name: "Emre Uçmaz",
       role: "Başkan",
       content: "Organizasyonun genel yönetimini ve stratejik kararlarını üstlenmektedir.",
       image: "/images/unknown-member.svg",
-      linkedinUrl: "https://www.linkedin.com/in/o-devrim-karabulut/",
+      linkedinUrl: "https://www.linkedin.com/in/emreucmaz",
     },
     {
       memberID: 2,
