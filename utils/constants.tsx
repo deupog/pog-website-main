@@ -56,11 +56,11 @@ export const MEMBERS_DATA = {
     },
     {
       memberID: 2,
-      name: "Zafer Berk Karayol",
+      name: "Enes Arda Güneri",
       role: "Başkan Yardımcısı",
-      content: "Başqan'a destek olarak organizasyonun işleyişine katkı sağlar.",
+      content: "Başkan'a destek olarak organizasyonun işleyişine katkı sağlar.",
       image: "/images/unknown-member.svg",
-      linkedinUrl: "https://www.linkedin.com/in/zafer-berk-karayol/",
+      linkedinUrl: "https://www.linkedin.com/in/enes-arda-g%C3%BCneri",
     },
     {
       memberID: 3,
@@ -119,12 +119,12 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/ferhat-aybergüler/",
     },
     {
-      memberID: 8,
-      name: "Ferhat Aybergüler",
-      role: "Tasarım Ekibi Üyesi",
-      content: "Tasarım ekibine destek sağlar ve projelere katkıda bulunur.",
+      memberID: 10,
+      name: "Arzu Irmak Findos",
+      role: "Prodüksiyon Ekibi Üyesi",
+      content: "Web sitesi ile ilgilenir .",
       image: "/images/unknown-member.svg",
-      linkedinUrl: "https://www.linkedin.com/in/ferhat-aybergüler/",
+      linkedinUrl: "https://www.linkedin.com/in/arzu-irmak-findos-150720353",
     },
   ],
 };
