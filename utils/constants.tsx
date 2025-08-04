@@ -118,6 +118,14 @@ export const MEMBERS_DATA = {
       image: "/images/unknown-member.svg",
       linkedinUrl: "https://www.linkedin.com/in/ferhat-aybergüler/",
     },
+    {
+      memberID: 8,
+      name: "Ferhat Aybergüler",
+      role: "Tasarım Ekibi Üyesi",
+      content: "Tasarım ekibine destek sağlar ve projelere katkıda bulunur.",
+      image: "/images/unknown-member.svg",
+      linkedinUrl: "https://www.linkedin.com/in/ferhat-aybergüler/",
+    },
   ],
 };
 
