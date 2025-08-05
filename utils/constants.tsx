@@ -73,7 +73,7 @@ export const MEMBERS_DATA = {
     {
       memberID: 4,
       name: "Gizem Asker",
-      role: "Etkinlik Görevlisi",
+      role: "Etkinlik Ekibi Koordinatörü",
       content: "Prodüksiyon süreçlerinin planlanması ve yürütülmesinden sorumludur. Etkinliklerin düzenlenmesi ve ekiplerin koordinasyonu konusunda liderlik yapmaktadır.",
       image: "/images/unknown-member.svg",
       linkedinUrl: "https://www.linkedin.com/in/gizem-asker/",
@@ -88,19 +88,19 @@ export const MEMBERS_DATA = {
     },
     {
       memberID: 5,
-      name: "Elif Başer",
-      role: "Prodüksiyon Ekibi Üyesi",
+      name: "Atakan Sezer",
+      role: "Sosyal Medya Koordinatörü",
       content: "Tasarım süreçlerinde ekip çalışmalarına katkıda bulunur.",
       image: "/images/unknown-member.svg",
-      linkedinUrl: "https://www.linkedin.com/in/elif-başer-5576bb246/",
+      linkedinUrl: "https://www.linkedin.com/in/atakan-sezer-698497366?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     {
       memberID: 6,
-      name: "Esma Oruç",
+      name: "Göksu İlker Durak",
       role: "Prodüksiyon Ekibi Üyesi",
       content: "Tasarım projelerinde yaratıcı çözümler sunar.",
       image: "/images/unknown-member.svg",
-      linkedinUrl: "https://www.linkedin.com/in/esma-oruç-3a537525a/",
+      linkedinUrl: "https://www.linkedin.com/in/goksu-ilker-durak?trk=contact-info",
     },
     {
       memberID: 7,
