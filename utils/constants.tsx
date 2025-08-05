@@ -96,27 +96,27 @@ export const MEMBERS_DATA = {
     },
     {
       memberID: 6,
-      name: "Göksu İlker Durak",
-      role: "Prodüksiyon Ekibi Üyesi",
+      name: "Melike Güler",
+      role: "İletişim Koordinatörü",
       content: "Tasarım projelerinde yaratıcı çözümler sunar.",
       image: "/images/unknown-member.svg",
-      linkedinUrl: "https://www.linkedin.com/in/goksu-ilker-durak?trk=contact-info",
+      linkedinUrl: "http://www.linkedin.com/in/melike-g%C3%BCler-78bba0330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
       memberID: 7,
-      name: "Sude Delen",
-      role: "Tasarım Ekibi Üyesi",
+      name: "Firdevs Çolak",
+      role: "Etkinlik Koordinatörü",
       content: "Grafik ve görsel tasarımlar üzerinde çalışmaktadır.",
       image: "/images/unknown-member.svg",
-      linkedinUrl: "https://www.linkedin.com/in/sude-delen-3ab32324a/,"
+      linkedinUrl: "https://www.linkedin.com/in/firdevscolak?originalSubdomain=tr"
     },
     {
       memberID: 8,
-      name: "Ferhat Aybergüler",
-      role: "Tasarım Ekibi Üyesi",
+      name: "Göksu İlker Durak",
+      role: "Prodüksiyon Ekibi Üyesi",
       content: "Tasarım ekibine destek sağlar ve projelere katkıda bulunur.",
       image: "/images/unknown-member.svg",
-      linkedinUrl: "https://www.linkedin.com/in/ferhat-aybergüler/",
+      linkedinUrl: "https://www.linkedin.com/in/goksu-ilker-durak?trk=contact-info",
     },
     {
       memberID: 10,
@@ -126,6 +126,23 @@ export const MEMBERS_DATA = {
       image: "/images/unknown-member.svg",
       linkedinUrl: "https://www.linkedin.com/in/arzu-irmak-findos-150720353",
     },
+    {
+      memberID: 11,
+      name: "Aliye Haznedar",
+      role: "İletişim Ekibi Üyesi",
+      content: "",
+      image: "/images/unknown-member.svg",
+      linkedinUrl: "http://linkedin.com/in/aliye-haznedar-73a7802b7",
+    },
+    {
+      memberID: 12,
+      name: "Sude Delen",
+      role: "Tasarım Ekibi Üyesi",
+      content: " .",
+      image: "/images/unknown-member.svg",
+      linkedinUrl: "https://www.linkedin.com/in/sude-delen-3ab32324a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+
   ],
 };
 
