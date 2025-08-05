@@ -89,7 +89,7 @@ export const MEMBERS_DATA = {
     {
       memberID: 5,
       name: "Atakan Sezer",
-      role: "Sosyal Medya Ekibi Koordinatörü",
+      role: "Sosyal Medya Koordinatörü",
       content: "Topluluğun Sosyal medya kısmını organize eder.",
       image: "/images/unknown-member.svg",
       linkedinUrl: "https://www.linkedin.com/in/atakan-sezer-698497366?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
