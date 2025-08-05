@@ -81,23 +81,23 @@ export const MEMBERS_DATA = {
     {
       memberID: 9,
       name: "Hayrunnisa Günay",
-      role: "Tasarım Koordinatörü",
-      content: "Prodüksiyon ekibinin çeşitli projelerinde aktif rol alır.",
+      role: "Tasarım Ekibi Koordinatörü",
+      content: "Tasarım süreçlerinde ekip çalışmalarına katkıda bulunur.",
       image: "/images/unknown-member.svg",
       linkedinUrl: "https://www.linkedin.com/in/hayrunnisa-g%C3%BCnay-5817242a3",
     },
     {
       memberID: 5,
       name: "Atakan Sezer",
-      role: "Sosyal Medya Koordinatörü",
-      content: "Tasarım süreçlerinde ekip çalışmalarına katkıda bulunur.",
+      role: "Sosyal Medya Ekibi Koordinatörü",
+      content: "Topluluğun Sosyal medya kısmını organize eder.",
       image: "/images/unknown-member.svg",
       linkedinUrl: "https://www.linkedin.com/in/atakan-sezer-698497366?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     {
       memberID: 6,
       name: "Melike Güler",
-      role: "İletişim Koordinatörü",
+      role: "İletişim Ekibi Koordinatörü",
       content: "Tasarım projelerinde yaratıcı çözümler sunar.",
       image: "/images/unknown-member.svg",
       linkedinUrl: "http://www.linkedin.com/in/melike-g%C3%BCler-78bba0330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -105,7 +105,7 @@ export const MEMBERS_DATA = {
     {
       memberID: 7,
       name: "Firdevs Çolak",
-      role: "Etkinlik Koordinatörü",
+      role: "Etkinlik Ekibi Üyesi",
       content: "Grafik ve görsel tasarımlar üzerinde çalışmaktadır.",
       image: "/images/unknown-member.svg",
       linkedinUrl: "https://www.linkedin.com/in/firdevscolak?originalSubdomain=tr"
