@@ -142,7 +142,22 @@ export const MEMBERS_DATA = {
       image: "/images/unknown-member.svg",
       linkedinUrl: "https://www.linkedin.com/in/sude-delen-3ab32324a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
-
+    {
+      memberID: 13,
+      name: "Arzu Hamdioğlu",
+      role: "İletişim Ekibi Üyesi",
+      content: " .",
+      image: "/images/unknown-member.svg",
+      linkedinUrl: "https://www.linkedin.com/in/arzu-hamdio%C4%9Flu-63b994378?trk=contact-info",
+    },
+    {
+      memberID: 14,
+      name: "Emir Erol",
+      role: "Etkinlik Ekibi Üyesi",
+      content: " .",
+      image: "/images/unknown-member.svg",
+      linkedinUrl: "https://www.linkedin.com/in/emir-erol-837652235?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
   ],
 };
 
