@@ -105,7 +105,7 @@ export const MEMBERS_DATA = {
     {
       memberID: 7,
       name: "Firdevs Çolak",
-      role: "Etkinlik Ekibi Üyesi",
+      role: "Etkinlik Ekibi Koordinatörü",
       content: "Grafik ve görsel tasarımlar üzerinde çalışmaktadır.",
       image: "/images/unknown-member.svg",
       linkedinUrl: "https://www.linkedin.com/in/firdevscolak?originalSubdomain=tr"
