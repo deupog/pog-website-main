@@ -158,6 +158,14 @@ export const MEMBERS_DATA = {
       image: "/images/unknown-member.svg",
       linkedinUrl: "https://www.linkedin.com/in/emir-erol-837652235?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
+    {
+      memberID: 15,
+      name: "Yaren Esma Şahin",
+      role: "Etkinlik Ekibi Üyesi",
+      content: " .",
+      image: "/images/unknown-member.svg",
+      linkedinUrl: "https://www.linkedin.com/in/yaren-esma-%C5%9Fahin-95a98a279",
+    },
   ],
 };
 
