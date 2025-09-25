@@ -69,10 +69,12 @@ export default function HomeSection() {
           <button className="relative bg-[#1a264e] dark:bg-white text-white dark:text-gray-900 py-3 px-10 rounded-full shadow-lg text-sm md:text-xl font-medium transform transition-transform duration-300 ease-in-out hover:scale-105 hover:bg-transparent dark:hover:bg-transparent overflow-hidden group">
             <span className="absolute inset-0 rounded-full border-2 border-transparent group-hover:border-gray-900 dark:group-hover:border-white"></span>
             <a href="#about" className="relative">Keşfet</a>
-          <button className="relative bg-gradient-to-r from-[#F2C334] via-[#F2A03C] to-[#BC3964] text-white dark:text-gray-900 py-3 px-10 rounded-full shadow-lg text-sm md:text-xl font-medium transform transition-transform duration-300 ease-in-out opacity-50 cursor-not-allowed pointer-events-none overflow-hidden group">
-  <span className="absolute inset-0 rounded-full border-2 border-transparent group-hover:border-gray-900 dark:group-hover:border-white"></span>
-  <Link href="/eggjam" className="relative pointer-events-none">JAMINATION 8</Link>
-</button>
+           <div className="relative opacity-50 cursor-not-allowed">
+      <button className="relative bg-gradient-to-r from-[#F2C334] via-[#F2A03C] to-[#BC3964] text-white dark:text-gray-900 py-3 px-10 rounded-full shadow-lg text-sm md:text-xl font-medium overflow-hidden w-full">
+        <span className="absolute inset-0 rounded-full border-2 border-transparent"></span>
+        <span className="relative">JAMINATION 8</span>
+      </button>
+    </div>
 
         </div>
       </div>
