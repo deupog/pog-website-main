@@ -75,7 +75,7 @@ export default function HomeSection() {
       disabled
     >
       <span className="absolute inset-0 rounded-full border-2 border-transparent"></span>
-      <span className="relative">JAMINATION 8</span>
+      <span className="relative">JAMINATION 8 (Yakında)</span>
     </button>
         </div>
       </div>
