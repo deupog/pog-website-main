@@ -43,7 +43,7 @@ export const EVENTS_DATA = {
 };
 
 export const MEMBERS_DATA = {
-  title: "Üyelerimiz",
+  title: "Ekibimiz",
   cardContent: "Takımla Tanışın",
   membersArray: [
     {
