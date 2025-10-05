@@ -8,7 +8,7 @@ interface JoinUsButtonProps {
 export default function JoinUsButton({ className }: JoinUsButtonProps) {
   return (
     <a
-      href="https://docs.google.com/forms/d/e/1FAIpQLSc9qkWndNNb-XiwJDcNdkCH__YEOwWHeLsinm1MemqUhRNbgg/viewform"
+      href="https://linktr.ee/deupog"
       target="_blank"
       rel="noopener noreferrer"
       className={twMerge(

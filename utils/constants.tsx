@@ -226,7 +226,7 @@ export const NAVBAR_MENU_DATA = {
       href: "#events",
     },
     {
-      name: "Üyeler",
+      name: "Ekibimiz",
       href: "#members",
     },
   ],
