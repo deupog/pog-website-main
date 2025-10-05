@@ -12,7 +12,7 @@ import clouds from "../public/images/cloudsNew.png";
 import mobileClouds from "../public/images/mobile-clouds.png";
 
 import stars from "../public/images/star.png"; // darkmode
-import Link from "next/link";
+//import Link from "next/link";
 
 export default function HomeSection() {
   const [isDarkMode, setIsDarkMode] = useState(false);
