@@ -1,67 +1,6 @@
 import React from "react";
 import { FaRegCalendarAlt } from "react-icons/fa";
 
-// URL'leri otomatik algılayıp linke çeviren fonksiyon
-const autoDetectUrls = (text: string): string => {
-  if (!text) return '';
-  
-  // URL pattern'leri
-  const urlPattern = /(https?:\/\/[^\s<]+)/g;
-  const formsPattern = /(forms\.gle\/[^\s<]+)/g;
-  const shortUrlPattern = /(bit\.ly\/[^\s<]+|tinyurl\.com\/[^\s<]+|t\.ly\/[^\s<]+)/g;
-  
-  let processedText = text;
-  
-  // Tüm URL pattern'lerini işle
-  processedText = processedText.replace(urlPattern, '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">$1</a>');
-  processedText = processedText.replace(formsPattern, '<a href="https://$1" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">$1</a>');
-  processedText = processedText.replace(shortUrlPattern, '<a href="https://$1" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">$1</a>');
-  
-  return processedText;
-};
-
-// HTML tag'lerini temizleyen fonksiyon (truncate için)
-const stripHtml = (html: string): string => {
-  return html.replace(/<[^>]*>/g, '');
-};
-
-// HTML içeriğini truncate eden fonksiyon
-const truncateHtmlContent = (html: string, length: number): string => {
-  const plainText = stripHtml(html);
-  if (plainText.length <= length) return html;
-  
-  // HTML'i koruyarak truncate et
-  let truncated = '';
-  let textCount = 0;
-  let inTag = false;
-  let tagContent = '';
-  
-  for (let i = 0; i < html.length; i++) {
-    const char = html[i];
-    
-    if (char === '<') {
-      inTag = true;
-      tagContent = char;
-    } else if (char === '>' && inTag) {
-      tagContent += char;
-      truncated += tagContent;
-      inTag = false;
-      tagContent = '';
-    } else if (inTag) {
-      tagContent += char;
-    } else {
-      if (textCount < length) {
-        truncated += char;
-        textCount++;
-      } else {
-        break;
-      }
-    }
-  }
-  
-  return truncated + "...";
-};
-
 export const EventBox: React.FC<{
   event: EventData;
   isSelected: boolean;
@@ -69,9 +8,9 @@ export const EventBox: React.FC<{
   onClose: () => void;
   isHidden: boolean;
 }> = ({ event, isSelected, onClick, onClose, isHidden }) => {
-  
-  // Content'i işle - URL'leri linke çevir
-  const processedContent = autoDetectUrls(event.content);
+  const truncateContent = (content: string, length: number) => {
+    return content.length > length ? content.substring(0, length) + "..." : content;
+  };
 
   return (
     <div
@@ -105,15 +44,12 @@ export const EventBox: React.FC<{
           </p>
         </div>
       </div>
-      
-      <div
+      <p
         className={`mt-1 md:mt-2 text-gray-600 dark:text-gray-300 text-sm md:text-base ${
           !isSelected ? "line-clamp-2" : ""
         }`}
         dangerouslySetInnerHTML={{
-          __html: isSelected 
-            ? processedContent 
-            : truncateHtmlContent(processedContent, 70),
+          __html: isSelected ? event.content : truncateContent(event.content, 70),
         }}
       />
     </div>
