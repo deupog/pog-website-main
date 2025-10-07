@@ -1,40 +1,10 @@
 import { Client } from "@notionhq/client";
+import { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 const notionSecret = process.env.NOTION_SECRET;
 const notionDatabaseId = process.env.NOTION_DATABASE_ID;
 
 const notion = new Client({ auth: notionSecret });
-
-// Row tipini güncelle - link bilgisini de içerecek şekilde
-type Row = {
-  header: { 
-    id: string; 
-    title: { 
-      text: { 
-        content: string 
-      } 
-    }[] 
-  };
-  content: { 
-    id: string; 
-    rich_text: { 
-      type: string;
-      text: { 
-        content: string;
-        link?: { url: string }  // LINK BİLGİSİ EKLENDİ
-      };
-      href?: string;  // HREF BİLGİSİ EKLENDİ
-      plain_text: string;
-      annotations?: any;
-    }[] 
-  };
-  date: { 
-    id: string; 
-    date: { 
-      start: string 
-    } 
-  };
-};
 
 export type EventData = {
   header: string;
@@ -42,23 +12,25 @@ export type EventData = {
   date: string;
 };
 
-// Content temizleme fonksiyonunu GÜNCELLE - linkleri koru
+// Type guard - PageObjectResponse kontrolü
+const isPageObjectResponse = (result: any): result is PageObjectResponse => {
+  return result.object === 'page' && result.properties !== undefined;
+};
+
+// Content temizleme fonksiyonu
 const cleanContent = (richText: any[]): string => {
   if (!richText || richText.length === 0) return '';
 
-  // Rich text'i işle - linkleri koru
   const processedContent = richText.map(block => {
     const text = block.plain_text || block.text?.content || '';
     
-    // LINK KONTROLÜ - hem href hem de text.link
+    // LINK KONTROLÜ
     const linkUrl = block.href || block.text?.link?.url;
     
-    // Eğer link varsa HTML linkine çevir
     if (linkUrl) {
       return `<a href="${linkUrl}" target="_blank" rel="noopener noreferrer" class="text-blue-500 hover:underline">${text}</a>`;
     }
     
-    // Link yoksa normal metin
     return text;
   }).join('');
 
@@ -74,31 +46,39 @@ export const fetchEvents = async (): Promise<EventData[]> => {
     database_id: notionDatabaseId,
   });
 
-  // DEBUG: Notion API yanıtını kontrol et
-  console.log('=== NOTION API RAW RESPONSE ===');
-  if (query.results.length > 0) {
-    const firstResult = query.results[0];
-    console.log('First result properties:', firstResult.properties);
-    console.log('Content rich_text:', firstResult.properties?.content?.rich_text);
-  }
-
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  //@ts-ignore
-  const rows = query.results.map((res) => res.properties) as Row[];
-
-  const rowsStructured: EventData[] = rows.map((row) => {
-    const richText = row.content?.rich_text || [];
-    
-    // DEBUG: Her row'un link içerip içermediğini kontrol et
-    const hasLinks = richText.some(block => block.href || block.text?.link?.url);
-    console.log('Row has links:', hasLinks, 'Content:', richText);
-
-    return {
-      header: row.header?.title[0]?.text?.content || '',
-      content: cleanContent(richText),  // GÜNCELLENDİ - artık linkleri koruyor
-      date: row.date?.date?.start || '',
-    };
+  // DEBUG: Type'ları kontrol et
+  console.log('=== NOTION API RESPONSE TYPES ===');
+  console.log('Results count:', query.results.length);
+  query.results.forEach((result, index) => {
+    console.log(`Result ${index} type:`, result.object);
+    console.log(`Result ${index} has properties:`, 'properties' in result);
   });
 
+  const rowsStructured: EventData[] = query.results
+    .filter(isPageObjectResponse) // Sadece PageObjectResponse'ları filtrele
+    .map((result) => {
+      const properties = result.properties;
+      
+      // Type-safe property erişimi
+      const headerProperty = properties.header as any;
+      const contentProperty = properties.content as any;
+      const dateProperty = properties.date as any;
+
+      const header = headerProperty?.title?.[0]?.text?.content || '';
+      const richText = contentProperty?.rich_text || [];
+      const date = dateProperty?.date?.start || '';
+
+      // DEBUG: Her row'un link içerip içermediğini kontrol et
+      const hasLinks = richText.some((block: any) => block.href || block.text?.link?.url);
+      console.log(`Row "${header}" has links:`, hasLinks);
+
+      return {
+        header: header,
+        content: cleanContent(richText),
+        date: date,
+      };
+    });
+
+  console.log('Processed events count:', rowsStructured.length);
   return rowsStructured;
 };
