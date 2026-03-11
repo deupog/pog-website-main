@@ -64,9 +64,9 @@ export const MEMBERS_DATA = {
     },
     {
       memberID: 3,
-      name: "Umut Coşkun Sağlık",
-      role: "Başkan Yardımcısı",
-      content: "Başkan'a destek olarak organizasyonun işleyişine katkı sağlar.",
+      name: "Arda Çeray",
+      role: "Teknik Ekip",
+      content: "Tasarım ekibine destek sağlar ve projelere katkıda bulunur.",
       image: "/images/unknown-member.svg",
       linkedinUrl: "https://www.linkedin.com/in/umut-sa%C4%9Fl%C4%B1k-1b8ba2369",
     },
@@ -113,7 +113,7 @@ export const MEMBERS_DATA = {
     {
       memberID: 8,
       name: "Göksu İlker Durak",
-      role: "Prodüksiyon Ekibi Üyesi",
+      role: "Teknik Ekip",
       content: "Tasarım ekibine destek sağlar ve projelere katkıda bulunur.",
       image: "/images/unknown-member.svg",
       linkedinUrl: "https://www.linkedin.com/in/goksu-ilker-durak?trk=contact-info",
