@@ -153,7 +153,7 @@ export const MEMBERS_DATA = {
     {
       memberID: 14,
       name: "Göksu İlker Durak",
-      role: "Teknik Ekip",
+      role: "Teknik Ekibi Üyesi",
       content: "Tasarım ekibine destek sağlar ve projelere katkıda bulunur.",
       image: "/images/unknown-member.svg",
       linkedinUrl: "https://www.linkedin.com/in/goksu-ilker-durak?trk=contact-info",
