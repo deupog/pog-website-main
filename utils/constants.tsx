@@ -56,6 +56,14 @@ export const MEMBERS_DATA = {
     },
     {
       memberID: 2,
+      name: "Melike Güler",
+      role: "Başkan Yardımcısı",
+      content: "Tasarım projelerinde yaratıcı çözümler sunar.",
+      image: "/images/unknown-member.svg",
+      linkedinUrl: "http://www.linkedin.com/in/melike-g%C3%BCler-78bba0330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    },
+    {
+      memberID: 3,
       name: "Gizem Asker",
       role: "Etkinlik Ekibi Koordinatörü",
       content: "Prodüksiyon süreçlerinin planlanması ve yürütülmesinden sorumludur. Etkinliklerin düzenlenmesi ve ekiplerin koordinasyonu konusunda liderlik yapmaktadır.",
@@ -63,7 +71,7 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/gizem-asker/",
     },
     {
-      memberID: 3,
+      memberID: 4,
       name: "Firdevs Çolak",
       role: "Etkinlik Ekibi Koordinatörü",
       content: "Grafik ve görsel tasarımlar üzerinde çalışmaktadır.",
@@ -71,7 +79,7 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/firdevscolak?originalSubdomain=tr"
     },
         {
-      memberID: 4,
+      memberID: 5,
       name: "Emir Erol",
       role: "Etkinlik Ekibi Üyesi",
       content: " .",
@@ -79,7 +87,7 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/emir-erol-837652235?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
-      memberID: 5,
+      memberID: 6,
       name: "Yaren Esma Şahin",
       role: "Etkinlik Ekibi Üyesi",
       content: " .",
@@ -87,7 +95,7 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/yaren-esma-%C5%9Fahin-95a98a279",
     },
     {
-      memberID: 6,
+      memberID: 7,
       name: "Hayrunnisa Günay",
       role: "Tasarım Ekibi Koordinatörü",
       content: "Tasarım süreçlerinde ekip çalışmalarına katkıda bulunur.",
@@ -95,7 +103,7 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/hayrunnisa-g%C3%BCnay-5817242a3",
     },
     {
-      memberID: 7,
+      memberID: 8,
       name: "Sude Delen",
       role: "Tasarım Ekibi Üyesi",
       content: " .",
@@ -103,7 +111,7 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/sude-delen-3ab32324a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     },
     {
-      memberID: 8,
+      memberID: 9,
       name: "Atakan Sezer",
       role: "Sosyal Medya Koordinatörü",
       content: "Topluluğun Sosyal medya kısmını organize eder.",
@@ -111,17 +119,9 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/atakan-sezer-698497366?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     },
     {
-      memberID: 9,
-      name: "Melike Güler",
-      role: "İletişim Ekibi Koordinatörü",
-      content: "Tasarım projelerinde yaratıcı çözümler sunar.",
-      image: "/images/unknown-member.svg",
-      linkedinUrl: "http://www.linkedin.com/in/melike-g%C3%BCler-78bba0330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-    },
-    {
       memberID: 10,
       name: "Osman Tuna Güney",
-      role: "İletişim Ekibi Koordinatörü",
+      role: "İletişim Ekibi Üyesi",
       content: "Tasarım projelerinde yaratıcı çözümler sunar.",
       image: "/images/unknown-member.svg",
       linkedinUrl: "https://www.linkedin.com/in/osman-tuna-güney-7baa52389?utm_source=share_via&utm_content=profile&utm_medium=member_ios",
@@ -145,7 +145,7 @@ export const MEMBERS_DATA = {
     {
       memberID: 13,
       name: "Arzu Hamdioğlu",
-      role: "İletişim Ekibi Üyesi",
+      role: "İletişim Ekibi Koordinatörü",
       content: " .",
       image: "/images/unknown-member.svg",
       linkedinUrl: "https://www.linkedin.com/in/arzu-hamdio%C4%9Flu-63b994378?trk=contact-info",
