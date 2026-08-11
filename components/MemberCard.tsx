@@ -19,10 +19,10 @@ export const MemberCard: React.FC<MemberProps> = ({ member }) => {
     
       <div className="flex justify-between">
         <div>
-          <p className="text-[10px] md:text-sm text-black dark:text-white">
+          <p className="text-sm text-black dark:text-white">
             {member.name}
           </p>
-          <p className="text-[8px] md:text-xs text-textGray dark:text-gray-300 font-light italic">
+          <p className="text-xs text-textGray dark:text-gray-300 font-light italic">
             {member.role}
           </p>
         </div>
