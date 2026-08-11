@@ -63,7 +63,15 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/arzu-hamdioğlu-63b994378",
     },
     {
-      memberID: 3,
+      memberId: 3,
+      name: "Osman Tuna Güney",
+      role: "Başkan Yardımcısı",
+      content: "",
+      image: "/images/unknown-member.svg",
+      linkedinUrl: "https://www.linkedin.com/in/osman-tuna-güney-7baa52389",
+    },
+    {
+      memberID: 4,
       name: "Atacan Pınaroğlu",
       role: "Etkinlik Koordinatörü",
       content: "",
@@ -71,7 +79,7 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/atacanpinaroglu",
     },
     {
-      memberID: 4,
+      memberID: 5,
       name: "Resul Şahin",
       role: "İletişim Koordinatörü",
       content: "",
@@ -79,7 +87,7 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/resul-şahin",
     },
     {
-      memberID: 5,
+      memberID: 6,
       name: "Atakan Sezer",
       role: "Sosyal Medya Koordinatörü",
       content: "",
@@ -87,7 +95,7 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/atakan-sezer-698497366",
     },
     {
-      memberID: 6,
+      memberID: 7,
       name: "Sude Delen",
       role: "Tasarım Koordinatörü",
       content: "",
@@ -95,7 +103,7 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/sude-delen-3ab32324a",
     },
     {
-      memberID: 7,
+      memberID: 8,
       name: "Kerem Göksu",
       role: "Teknik Ekip Koordinatörü",
       content: "",
@@ -103,7 +111,7 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/kerem-g%C3%B6ksu/",
     },
     {
-      memberID: 8,
+      memberID: 9,
       name: "Berke Songul",
       role: "Etkinlik Ekibi Üyesi",
       content: "",
@@ -111,7 +119,7 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/berkesongul",
     },
     {
-      memberID: 9,
+      memberID: 10,
       name: "Onur Kepenek",
       role: "Etkinlik Ekibi Üyesi",
       content: "",
@@ -119,7 +127,7 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/onur-kepenek-22978140a",
     },
     {
-      memberID: 10,
+      memberID: 11,
       name: "Ömer Gülten",
       role: "Etkinlik Ekibi Üyesi",
       content: "",
@@ -127,7 +135,7 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/%C3%B6mer-g%C3%BClten-bb6479325",
     },
     {
-      memberID: 11,
+      memberID: 12,
       name: "Tuğra Uygur",
       role: "Etkinlik Ekibi Üyesi",
       content: "",
@@ -135,7 +143,7 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/tuğra-uygur-6068b13b1",
     },
     {
-      memberID: 12,
+      memberID: 13,
       name: "Elif Güneş",
       role: "İletişim Ekibi Üyesi",
       content: "",
@@ -143,7 +151,7 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/elif-güneş-324279302",
     },
     {
-      memberID: 13,
+      memberID: 14,
       name: "Ersel Günay",
       role: "Tasarım Ekibi Üyesi",
       content: "",
@@ -151,7 +159,7 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/ersel-günay-453a2b330",
     },
     {
-      memberID: 14,
+      memberID: 15,
       name: "Arda Çeray",
       role: "Teknik Ekibi Üyesi",
       content: "",
@@ -159,7 +167,7 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/ardaceray/",
     },
     {
-      memberID: 15,
+      memberID: 16,
       name: "Emirhan Çalışkan",
       role: "Teknik Ekibi Üyesi",
       content: "",
