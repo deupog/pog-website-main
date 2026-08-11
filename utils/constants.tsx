@@ -63,7 +63,7 @@ export const MEMBERS_DATA = {
       linkedinUrl: "https://www.linkedin.com/in/arzu-hamdioğlu-63b994378",
     },
     {
-      memberId: 3,
+      memberID: 3,
       name: "Osman Tuna Güney",
       role: "Başkan Yardımcısı",
       content: "",
