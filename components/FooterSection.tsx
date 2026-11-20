@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import footerLogo from "../public/images/LOGOVERS2.png";
 import { CONTACT_INFO_DATA, TEAM_LINKS_DATA } from "@/utils/constants";
@@ -85,6 +86,12 @@ const FooterSection: React.FC = () => {
             </span>
           ))}
         </p>
+        <Link
+          href="/gizlilik"
+          className="mt-2 inline-block text-sm text-footerContact hover:text-joinButton hover:underline"
+        >
+          Gizlilik Politikası
+        </Link>
       </div>
     </footer>
   );
