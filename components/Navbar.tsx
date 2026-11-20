@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import PogLogo from "../public/images/pog-logo-navbar.png";
 import JoinUsButton from "./JoinUsButton";
+import UniHubLoginButton from "./UniHubLoginButton";
 import { IoCloseOutline } from "react-icons/io5";
 import { IoIosMenu } from "react-icons/io";
 
@@ -38,7 +39,7 @@ export const Navbar: React.FC<{ onToggleDarkMode: (isDarkMode: boolean) => void 
           alt="PogLogo"
           width={120}
           height={60}
-          className="block md:w-[120px] md:h-[60px] w-[80px] h-[40px]"
+          className="block w-[80px] h-[40px] min-[1108px]:w-[120px] min-[1108px]:h-[60px]"
         />
       </div>
 
@@ -46,13 +47,13 @@ export const Navbar: React.FC<{ onToggleDarkMode: (isDarkMode: boolean) => void 
       <div>
         <button
           onClick={toggleDarkMode}
-          className="md:hidden text-2xl text-footerBG hover:text-white dark:text-white dark:hover:text-gray-300 z-50 absolute right-14 top-5" 
+          className="min-[1108px]:hidden text-2xl text-footerBG hover:text-white dark:text-white dark:hover:text-gray-300 z-50 absolute right-14 top-5" 
         >
           {isDarkMode ? <MdDarkMode /> : <MdOutlineDarkMode />}
         </button>
         <button
           onClick={toggleMenu}
-          className="md:hidden z-50  right-4 top-4 fixed"
+          className="min-[1108px]:hidden z-50  right-4 top-4 fixed"
         >
           {isMenuOpen ? (
             <IoCloseOutline size={30} />
@@ -63,7 +64,7 @@ export const Navbar: React.FC<{ onToggleDarkMode: (isDarkMode: boolean) => void 
       </div>
 
 
-      <div className="flex-1 justify-end space-x items-center hidden md:flex ">
+      <div className="flex-1 justify-end items-center hidden min-[1108px]:flex gap-4">
         <button
           onClick={toggleDarkMode}
           className="text-3xl hover:text-footerBG dark:hover:text-gray-300"
@@ -76,12 +77,13 @@ export const Navbar: React.FC<{ onToggleDarkMode: (isDarkMode: boolean) => void 
             {item.name}
           </a>
         ))}
+        <UniHubLoginButton className="whitespace-nowrap" />
         <JoinUsButton />
       </div>
 
      
       <div
-        className={`fixed top-0 right-0 h-full w-64 bg-footerBG z-40 transform transition-transform duration-300 ease-in-out ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 right-0 h-full w-64 bg-footerBG z-40 transform transition-transform duration-300 ease-in-out min-[1108px]:hidden ${isMenuOpen ? "translate-x-0" : "translate-x-full"
           }`}
       >
         <div className="flex flex-col items-center mt-10 space-y-8">
@@ -116,7 +118,10 @@ export const Navbar: React.FC<{ onToggleDarkMode: (isDarkMode: boolean) => void 
               </a>
             ))}
           </div>
-          <JoinUsButton className="text-md w-[180px]" />
+          <div className="flex w-[180px] flex-col gap-3">
+            <UniHubLoginButton className="w-full whitespace-nowrap" />
+            <JoinUsButton className="text-md w-full" />
+          </div>
         </div>
       </div>
     </div>

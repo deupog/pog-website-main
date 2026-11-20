@@ -10,6 +10,7 @@ export type EventData = {
   header: string;
   content: string;
   date: string;
+  unihubId?: number;
 };
 
 // Type guard - PageObjectResponse kontrolü

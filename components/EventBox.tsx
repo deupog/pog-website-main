@@ -11,6 +11,17 @@ export const EventBox: React.FC<{
   const truncateContent = (content: string, length: number) => {
     return content.length > length ? content.substring(0, length) + "..." : content;
   };
+  const parsedDate = event.date ? new Date(event.date) : null;
+  const formattedDate =
+    parsedDate && !Number.isNaN(parsedDate.getTime())
+      ? new Intl.DateTimeFormat("tr-TR", {
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+        }).format(parsedDate)
+      : "Tarih belirtilmemiş";
 
   return (
     <div
@@ -40,7 +51,7 @@ export const EventBox: React.FC<{
         <div className="flex items-center space-x-1">
           <FaRegCalendarAlt className="text-gray-500 dark:text-gray-400" />
           <p className="text-xs text-gray-500 dark:text-gray-400">
-            {event.date}
+            {formattedDate}
           </p>
         </div>
       </div>

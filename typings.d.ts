@@ -8,5 +8,6 @@ type EventData = {
   header: string;
   content: string;
   date: string;
+  unihubId?: number;
 };
  
