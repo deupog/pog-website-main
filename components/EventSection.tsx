@@ -154,7 +154,7 @@ export default function EventSection({
                   : "text-gray-600 dark:text-gray-300"
               }`}
             >
-              Upcoming Events
+              Yaklaşan Etkinlikler
             </button>
             <button
               type="button"
@@ -167,7 +167,7 @@ export default function EventSection({
                   : "text-gray-600 dark:text-gray-300"
               }`}
             >
-              Past Events
+              Geçmiş Etkinlikler
             </button>
           </div>
 
