@@ -8,14 +8,20 @@ import SponsorSection from '@/components/SponsorSection';
 import HomeSection from '@/components/HomeSection';
 import FooterSection from '@/components/FooterSection';
 
-export default function Page({ events }: { events: EventData[] }) {
+export default function Page({
+  events,
+  unihubKey,
+}: {
+  events: EventData[];
+  unihubKey?: string;
+}) {
 
     return (
         <div className="w-full">
-            <HomeSection />
+            <HomeSection unihubKey={unihubKey} />
             <AboutSection />
             <SponsorSection />
-            <EventSection events={events} /> 
+            <EventSection events={events} unihubKey={unihubKey} />
             <MemberSection />
             <FooterSection />
         </div>

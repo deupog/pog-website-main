@@ -1,13 +1,20 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import { UniHubError, type Visitor } from "unihub-community-sdk";
-import { unihub } from "@/features/unihub/client";
+import { createUniHubClient } from "@/features/unihub/client";
 
-export default function UniHubLoginButton({ className }: { className?: string }) {
+export default function UniHubLoginButton({
+  className,
+  unihubKey,
+}: {
+  className?: string;
+  unihubKey?: string;
+}) {
   const [visitor, setVisitor] = useState<Visitor | null>(null);
   const [busy, setBusy] = useState(false);
+  const unihub = useMemo(() => createUniHubClient(unihubKey), [unihubKey]);
 
   useEffect(() => {
     if (!unihub) return;
@@ -16,7 +23,7 @@ export default function UniHubLoginButton({ className }: { className?: string })
     const unsubscribe = unihub.auth.onChange(setVisitor);
     unihub.auth.handleRedirect().catch(() => undefined);
     return unsubscribe;
-  }, []);
+  }, [unihub]);
 
   const signIn = async () => {
     if (!unihub) return;

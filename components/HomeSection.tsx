@@ -14,7 +14,7 @@ import mobileClouds from "../public/images/mobile-clouds.png";
 import stars from "../public/images/star.png"; // darkmode
 //import Link from "next/link";
 
-export default function HomeSection() {
+export default function HomeSection({ unihubKey }: { unihubKey?: string }) {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const handleToggleDarkMode = (darkMode: boolean) => {
@@ -26,7 +26,7 @@ export default function HomeSection() {
       className={`relative h-screen md:h-[1110px] overflow-hidden ${isDarkMode ? "bg-[#042136]" : "bg-gradient-to-b from-[#38BDF8] to-[#218bb9]"
         }`}
     >
-      <Navbar onToggleDarkMode={handleToggleDarkMode} />
+      <Navbar onToggleDarkMode={handleToggleDarkMode} unihubKey={unihubKey} />
 
       {/* castle and clouds */}
       <div className="w-full absolute -bottom-10 z-10">

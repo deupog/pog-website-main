@@ -8,10 +8,11 @@ export const metadata = {
 
 export default async function Page() {
     const eventsData = await fetchEvents();
+    const unihubKey = process.env.UNIHUB_PK || process.env.NEXT_PUBLIC_UNIHUB_PK;
 
     return (
         <>
-            <Wrapper events={eventsData} />
+            <Wrapper events={eventsData} unihubKey={unihubKey} />
         </>
     );
 }

@@ -6,12 +6,19 @@ import rightGradient from "../public/images/event-rm.svg";
 import { EventBox } from "./EventBox";
 import { PageCard } from "./PageCard";
 import { EVENTS_DATA } from "@/utils/constants";
-import { unihub } from "@/features/unihub/client";
+import { createUniHubClient } from "@/features/unihub/client";
 
 type EventTab = "upcoming" | "past";
 const PAGE_SIZE = 10;
 
-export default function EventSection({ events }: { events: EventData[] }) {
+export default function EventSection({
+  events,
+  unihubKey,
+}: {
+  events: EventData[];
+  unihubKey?: string;
+}) {
+  const unihub = useMemo(() => createUniHubClient(unihubKey), [unihubKey]);
   const [tab, setTab] = useState<EventTab>("upcoming");
   const [page, setPage] = useState(0);
   const [selectedEvent, setSelectedEvent] = useState<number | null>(null);

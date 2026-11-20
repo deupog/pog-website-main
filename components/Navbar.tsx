@@ -9,7 +9,10 @@ import { IoIosMenu } from "react-icons/io";
 import { MdDarkMode, MdOutlineDarkMode } from "react-icons/md"; 
 import { NAVBAR_MENU_DATA, SOCIAL_DATA } from "@/utils/constants";
 
-export const Navbar: React.FC<{ onToggleDarkMode: (isDarkMode: boolean) => void }> = ({ onToggleDarkMode }) => {
+export const Navbar: React.FC<{
+  onToggleDarkMode: (isDarkMode: boolean) => void;
+  unihubKey?: string;
+}> = ({ onToggleDarkMode, unihubKey }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -77,7 +80,7 @@ export const Navbar: React.FC<{ onToggleDarkMode: (isDarkMode: boolean) => void 
             {item.name}
           </a>
         ))}
-        <UniHubLoginButton className="whitespace-nowrap" />
+        <UniHubLoginButton unihubKey={unihubKey} className="whitespace-nowrap" />
         <JoinUsButton />
       </div>
 
@@ -119,7 +122,7 @@ export const Navbar: React.FC<{ onToggleDarkMode: (isDarkMode: boolean) => void 
             ))}
           </div>
           <div className="flex w-[180px] flex-col gap-3">
-            <UniHubLoginButton className="w-full whitespace-nowrap" />
+            <UniHubLoginButton unihubKey={unihubKey} className="w-full whitespace-nowrap" />
             <JoinUsButton className="text-md w-full" />
           </div>
         </div>
