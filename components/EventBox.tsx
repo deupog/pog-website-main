@@ -1,5 +1,6 @@
 import React from "react";
 import { FaRegCalendarAlt } from "react-icons/fa";
+import type { AttendanceStatus } from "unihub-community-sdk";
 
 export const EventBox: React.FC<{
   event: EventData;
@@ -7,7 +8,23 @@ export const EventBox: React.FC<{
   onClick: () => void;
   onClose: () => void;
   isHidden: boolean;
-}> = ({ event, isSelected, onClick, onClose, isHidden }) => {
+  attendanceStatus?: AttendanceStatus;
+  attendanceBusy?: boolean;
+  attendanceMessage?: string;
+  onJoin?: () => void;
+  onViewQR?: () => void;
+}> = ({
+  event,
+  isSelected,
+  onClick,
+  onClose,
+  isHidden,
+  attendanceStatus,
+  attendanceBusy,
+  attendanceMessage,
+  onJoin,
+  onViewQR,
+}) => {
   const truncateContent = (content: string, length: number) => {
     return content.length > length ? content.substring(0, length) + "..." : content;
   };
@@ -63,6 +80,46 @@ export const EventBox: React.FC<{
           __html: isSelected ? event.content : truncateContent(event.content, 70),
         }}
       />
+
+      {isSelected && (
+        <div className="mt-5 flex flex-wrap items-center gap-3" onClick={(e) => e.stopPropagation()}>
+          {attendanceMessage && (
+            <p className="w-full text-sm font-medium text-red-600 dark:text-red-400">
+              {attendanceMessage}
+            </p>
+          )}
+
+          {attendanceStatus === "JOINED" ? (
+            <>
+              <span className="rounded-full bg-green-100 px-4 py-2 text-sm font-semibold text-green-700 dark:bg-green-900/40 dark:text-green-300">
+                Katılımınız doğrulandı
+              </span>
+              {onViewQR && (
+                <button
+                  type="button"
+                  onClick={onViewQR}
+                  className="rounded-full bg-[#1a264e] px-5 py-2 text-sm font-semibold text-white dark:bg-white dark:text-[#1a264e]"
+                >
+                  Karekodu görüntüle
+                </button>
+              )}
+            </>
+          ) : attendanceStatus === "PENDING_APPROVAL" ? (
+            <span className="rounded-full bg-amber-100 px-4 py-2 text-sm font-semibold text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">
+              Katılımınız bekleme listesinde
+            </span>
+          ) : (
+            <button
+              type="button"
+              onClick={onJoin}
+              disabled={attendanceBusy}
+              className="rounded-full bg-[#1a264e] px-5 py-2 text-sm font-semibold text-white disabled:opacity-60 dark:bg-white dark:text-[#1a264e]"
+            >
+              {attendanceBusy ? "İşleniyor..." : "Etkinliğe Katıl"}
+            </button>
+          )}
+        </div>
+      )}
     </div>
   );
 };
