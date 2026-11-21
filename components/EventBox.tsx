@@ -13,6 +13,7 @@ export const EventBox: React.FC<{
   attendanceMessage?: string;
   onJoin?: () => void;
   onViewQR?: () => void;
+  canJoin?: boolean;
 }> = ({
   event,
   isSelected,
@@ -24,6 +25,7 @@ export const EventBox: React.FC<{
   attendanceMessage,
   onJoin,
   onViewQR,
+  canJoin = true,
 }) => {
   const truncateContent = (content: string, length: number) => {
     return content.length > length ? content.substring(0, length) + "..." : content;
@@ -108,7 +110,7 @@ export const EventBox: React.FC<{
             <span className="rounded-full bg-amber-100 px-4 py-2 text-sm font-semibold text-amber-700 dark:bg-amber-900/40 dark:text-amber-300">
               Katılımınız bekleme listesinde
             </span>
-          ) : (
+          ) : canJoin ? (
             <button
               type="button"
               onClick={onJoin}
@@ -117,7 +119,7 @@ export const EventBox: React.FC<{
             >
               {attendanceBusy ? "İşleniyor..." : "Etkinliğe Katıl"}
             </button>
-          )}
+          ) : null}
         </div>
       )}
     </div>

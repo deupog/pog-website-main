@@ -349,6 +349,7 @@ export default function EventSection({
                   onViewQR={
                     event.unihubId ? () => viewQRCode(event.unihubId as number) : undefined
                   }
+                  canJoin={tab === "upcoming"}
                 />
               ))
             ) : (
